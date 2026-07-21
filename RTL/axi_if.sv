@@ -14,7 +14,7 @@ parameter SIZE_WIDTH = 3
 ) 
 (
   input logic ACLK,
-  input logic ARRESETn
+  input logic ARESETn
 );
 ///////////////////////////////////////////
 //          Signal declarations         //
@@ -77,7 +77,7 @@ modport slave_mp
 (
   //clock and reset
     input ACLK,
-    input ARRESETn,
+    input ARESETn,
 
   //1- Write address channel 
     input AWADDR,
@@ -129,7 +129,7 @@ modport slave_tb_mp
 (
   //clock and reset
     input ACLK,
-    input ARRESETn,
+    input ARESETn,
 
   //1- Write address channel 
     output AWADDR,
@@ -176,12 +176,12 @@ modport slave_tb_mp
 
 
 
-//2- TB MODPORT
+//3- MONITOR MODPORT
 modport monitor_mp
 (
   //clock and reset
     input ACLK,
-    input ARRESETn,
+    input ARESETn,
 
   //1- Write address channel 
     input AWADDR,
